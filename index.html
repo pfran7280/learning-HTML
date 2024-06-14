@@ -1,19 +1,209 @@
-<h1>Portfolio</h1>
+<!DOCTYPE html>
 
-<p>+15 años de experiencia <strong>desorrollador fronted</strong></p>
+<html>
 
-<h2>Experiencia </h2>
+<head>
+    <meta charset="utf-8"> <!--codificacion-->
+    <meta name="viewport" content="width=device-width">
+    <title>Portolio user</title>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09f">
+    <meta name="description" content="15 años de experiencia frontend">
+    <link rel="icon" type="image/jpg" href="/imgs/photo-perfil.jpg">
+    <!--opengraph-->
+    <meta property="og:tittle" content="Portfolio user">
+    <meta property="og:description" content="15 años de experiencia frontend">
+    <meta property="og:image" content="/imgs/photo-perfil.jpg">
+    <meta property="og:image:alt" content="photo user">
+    <link rel="alternate" href="https://user.dev/en" hreflang="en-ES">
+    <link rel="canonical" href="https://user.dev" hreflang="en-ES"> <!--codificacion pagina principal-->
+    <style>
+        body {
+            background-color: rgb(103, 184, 193);
+        }
+    </style>
+    
+</head>
 
-<ul>
-    <li>Adevinta - 2022</li>
-    <li>Hubii - 2020</li>
-    <li>Nacencia - 2025</li>
-</ul>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="https://twich.es/user" target="_blank" rel="noreferrer">Twich</a>
+        </nav>
+    </header>
 
-<img 
-    width="250"
-    height="300"
-    title="photo user" 
-    alt="Una fotografia del perfil del usuario" 
-    src="/imgs/photo-perfil.jpg" 
-/>
+    <!-- <iframe style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/hrxjBqZWsb0"
+        title="¡APRENDE CSS GRATIS! Curso de CSS desde cero para principiantes" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+    <!-- <video src="/meme cripto.mp4" autoplay loop muted></video> -->
+
+    <dialog id="dialog">
+        <h1>DO you know</h1>
+        <p>totalmente nativo</p>
+        <button id="hide">cerrar modal</button>
+    </dialog>
+
+    <button id="show">more information</button>
+
+    <script>
+        window.show.addEventListener('click', ()=>{
+            window.dialog.showModal()
+        })
+        window.hide.addEventListener('click', ()=>{
+            window.dialog.close()
+        })
+    </script>
+    
+
+    <main>
+        <p>+15 años de experiencia <strong>desorrollador fronted</strong></p>
+
+        <h2 id="experience">Experiencia </h2>
+
+        <ul>
+            <li class="list-item">Adevinta - 2022</li>
+            <li class="list-item">Hubii - 2020</li>
+            <li class="list-item">Nacencia - 2025</li>
+        </ul>
+
+        <a download href="/imgs/photo-perfil.jpg">
+            <img id="photo-img" width="250" height="300" title="photo user" alt="Una fotografia del perfil del usuario"
+                src="/imgs/photo-perfil.jpg" />
+        </a>
+
+        <h2 id="projects">Projects</h2>
+
+        <aside>
+            <header>
+                <h3>My favorite technologies</h3>
+            </header>
+            <ol type="1" reversed start="10">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Js</li>
+                <li>Noje js</li>
+            </ol>
+        </aside>
+        <button role="alert">
+            click here
+        </button>
+        <section>
+
+            <article>
+                <header>
+                    <h4>Corporate website</h4>
+                </header>
+                <p>Development of a corporate website with an interface
+                    friendly and modern.</p>
+                <footer>
+                    <small>Technologies used: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+            <!-- <article>
+                <header>
+                    <h4>Meme</h4>
+                    <img src="/meme.jpg" alt="img meme" loading="lazy" style="width:100%; aspect-ratio: 80/77;">
+                </header>
+                <p>description meme</p>
+                <footer>
+                    <small>Technologies used: HTML, CSS, JavaScript</small>
+                </footer>
+            </article> -->
+            <article>
+                <header>
+                    <h4>Corporate website</h4>
+                </header>
+                <p>Development of a corporate website with an interface
+                    friendly and modern.</p>
+                <footer>
+                    <small>Technologies used: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2>Frequent questions</h2>
+
+            <details open>
+                <summary>What studies do you have?</summary>
+                <p>I studied harvard informatics engineering</p>
+            </details>
+            <details>
+                <summary>What studies do you have?</summary>
+                <p>I studied harvard informatics engineering</p>
+            </details>
+            <details>
+                <summary>What studies do you have?</summary>
+                <p>I studied harvard informatics engineering</p>
+            </details>
+
+        </section>
+
+        <section>
+            <h2>Contact form</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Personal information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="ej.Fran" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="email@gmail.com">
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <div>
+                        <label>Telefono
+                            <input type="tel" name="telefono" placeholder="3874574" pattern="[0-9]{9}">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Others</legend>
+
+                    <div>
+                        <label for="why">Why contect me</label>
+                        <select name="why" id="why">
+                            <option value="1">Job</option>
+                            <option value="2">Doubt</option>
+                            <option value="3">More information</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="terms">Accept terms?</label>
+                        <input type="checkbox" name="terms" id="terms" required>
+                    </div>
+                    <div>
+                        <datalist id="languages">
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="Java"></option>
+                            <option value="C#"></option>
+                        </datalist>
+                        <label>
+                            What language can I help you?
+                            <input list="languages" name="languages">
+                        </label>
+                    </div>
+                </fieldset>
+
+
+                <button>Send email</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        Copyright 2024
+
+        <a href="mailto:user@gmail.com">Send email</a>
+        <a href="tel:+34656985986">Call me</a>
+    </footer>
+</body>
+
+</html>
