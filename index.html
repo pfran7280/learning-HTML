@@ -18,20 +18,50 @@
     <link rel="alternate" href="https://user.dev/en" hreflang="en-ES">
     <link rel="canonical" href="https://user.dev" hreflang="en-ES"> <!--codificacion pagina principal-->
     <style>
+        h1 {
+            color: rgb(216, 71, 71);
+            border-width: 3px;
+            border-style: solid;
+            border-color: blue;
+        }
+
         body {
-            background-color: rgb(103, 184, 193);
+            background: #f8f8f8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .link {
+            color: red;
+        }
+        
+        .link:hover {
+            outline: 1px solid red;
+        }
+
+        .link:active {
+            outline: 10px solid blue;
+        }
+
+        #show {
+            background: royalblue;
+            color: #f8f8f8;
+            border: 0;
+        }
+
+        li:first-child{
+            color: pink;
         }
     </style>
-    
+
 </head>
 
 <body>
     <header>
         <h1>Portfolio</h1>
         <nav>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="https://twich.es/user" target="_blank" rel="noreferrer">Twich</a>
+            <a class="link" href="#experience">Experience</a>
+            <a class="link" href="#projects">Projects</a>
+            <a class="link" href="https://twich.es/user" target="_blank" rel="noreferrer">Twich</a>
         </nav>
     </header>
 
@@ -51,17 +81,17 @@
     <button id="show">more information</button>
 
     <script>
-        window.show.addEventListener('click', ()=>{
+        window.show.addEventListener('click', () => {
             window.dialog.showModal()
         })
-        window.hide.addEventListener('click', ()=>{
+        window.hide.addEventListener('click', () => {
             window.dialog.close()
         })
     </script>
-    
+
 
     <main>
-        <p>+15 años de experiencia <strong>desorrollador fronted</strong></p>
+        <p class="description">+15 años de experiencia <strong>desorrollador fronted</strong></p>
 
         <h2 id="experience">Experiencia </h2>
 
